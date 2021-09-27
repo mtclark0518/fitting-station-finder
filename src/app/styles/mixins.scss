@@ -1,0 +1,57 @@
+@use "sass:color";
+
+@mixin customTransition($duration, $delay, $easing) {
+  transition: all $duration $delay $easing;
+}
+
+@mixin flex($dir, $justify, $align) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin centered() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin noScrollbar() {
+  scrollbar-width: none !important;
+
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+}
+
+
+@mixin fadeTo($direction, $color) {
+  background: -webkit-linear-gradient($direction, $color 0%, rgba(255, 255, 255, 0) 100%) !important;
+  /* Chrome10-25,Safari5.1-6 */
+}
+
+// $color: hex/rgb string, $amount: number%
+@mixin lightenBgOnHover($color, $amount) {
+  background: $color !important;
+  background-color: $color !important;
+  fill: $color !important;
+  transition: all $dur150 $easing-accel;
+
+  &:hover {
+    background: scale-color($color, $lightness: $amount) !important;
+    background-color: scale-color($color, $lightness: $amount) !important;
+    fill: scale-color($color, $lightness: $amount) !important;
+  }
+}
+
+@mixin lightenColorOnHover($color, $amount) {
+  color: $color !important;
+  stroke: $color !important;
+  transition: all $dur150 $easing-accel;
+
+  &:hover {
+    color: scale-color($color, $lightness: $amount) !important;
+    stroke: scale-color($color, $lightness: $amount) !important;
+  }
+}

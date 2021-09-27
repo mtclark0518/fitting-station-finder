@@ -1,0 +1,12 @@
+// * Removes map credits
+a.mapboxgl-ctrl-logo,
+.mapboxgl-ctrl-attrib {
+  display: none !important;
+}
+
+#map {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+}

@@ -1,0 +1,14 @@
+<div class="overlay centered">
+    <div class="about-us-modal" [awaitsClickOutside]="['about-us-modal']" (clickOutside)="onClose()">
+        <div class="d-flex flex-row align-items-center justify-content-between mb-3">
+            <div class="font-heading txt2">About Us</div>
+            <s4-icon icon="times-circle" cssClass="pointer-events-auto cursor-pointer hover-clr-secondary" (trigger)="onClose()"></s4-icon>
+        </div>
+        <div class="mx-2 mb-2">Coming Soon...</div>
+        <div class="seperator my-2"></div>
+        <div class="font-heading txt2 mb-3">External Links</div>
+        <div *ngFor="let link of links">
+            <div class="mx-2 font-main txt4 mb-2"><a target="_blank" href="{{link.href}}">{{link.title}}</a></div>
+        </div>
+    </div>
+</div>

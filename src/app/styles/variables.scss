@@ -1,0 +1,117 @@
+$font-heading: 'Segoe UI',
+'Open Sans Condensed',
+sans-serif;
+$font-serif: 'Source Serif Pro',
+serif;
+$font-main: 'Segoe UI', 'Open Sans'
+sans-serif;
+$red-dark: #bf0000;
+$red: #fb1010;
+$red-light: #f7908d;
+$salmon: #ff4f81;
+$orange-light:#ffc795;
+$orange: #ffb13d;
+$orange-dark:#fc9c3b;
+$yellow: #ffcd4f;
+$green: #00bf00;
+$green-dark: #009b00;
+$teal: #10fbfb;
+$teal-dark: #00e9f9;
+$blue-light: #6bb9ff;
+$blue: #3d8aff;
+$blue-dark: #1b61d5;
+$indigo: #754fff;
+$violet: #cd4fff;
+
+$black: #121212;
+$dark-d: #191919;
+$dark: #393939;
+$dark-l:#AFAFAF;
+$mid-d: #b3b3b3;
+$mid:#C5C5C5;
+$mid-l:#D6D6D6;
+$light-d: #E8E8E8;
+$light: #f3f3f3;
+$light-l: #fcfcfc;
+$white: #fefefe;
+
+// Theme Variables
+$bg: $white;
+$surface: $white;
+$primary: $dark;
+$primary-d: $dark-d;
+$primary-l: $dark-l;
+$secondary: $blue;
+$secondary-d: $blue-dark;
+$secondary-l: $blue-light;
+$error: $red;
+$success: $green;
+
+$on-bg:#000;
+$on-surface:#000;
+$on-primary: #fefefe;
+$on-secondary: #fefefe;
+$on-error: #fefefe;
+
+$txt-active: #212121;
+$txt-helper: #666;
+$txt-disabled: #a0a0a0;
+
+:root{
+    .theme-light {
+    --bg : #{$white};
+    }
+    .theme-dark{
+        --bg: #{$dark-d};
+    }
+}
+
+
+$box-shadow-right-flat: 2px 1px 2px -1px rgba(0, 0, 0, 0.2);
+$box-shadow-flat: 0 0 1px rgba(0, 0, 0, 0.05),
+0 1px 2px rgba(0, 0, 0, 0.1);
+$box-shadow-std: 0 10px 20px rgba(0, 0, 0, 0.1),
+0 6px 6px rgba(0, 0, 0, 0.15);
+$box-shadow-raised: 0 14px 28px rgba(0, 0, 0, 0.25),
+0 10px 10px rgba(0, 0, 0, 0.15);
+
+$box-shadow-main: $box-shadow-flat,
+$box-shadow-std;
+
+$border-radius: .23em;
+
+$easing-accel: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$easing-decel: cubic-bezier(0.215, 0.61, 0.355, 1);
+$easing-std: cubic-bezier(0.645, 0.045, 0.355, 1);
+$easing-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+$easing-in-out-sin: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$easing-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+$dur100: 100ms;
+$dur125: 125ms;
+$dur150: 150ms;
+$dur200: 200ms;
+$dur250: 250ms;
+$dur300: 300ms;
+$dur500: 500ms;
+
+
+$navigation-height: 56px;
+$height: calc(100vh - 56px);
+
+$sidePanelWidth: 420px;
+$sidePanelHeight: calc(100% - 44px);
+$sidePanelMinHeight: 400px;
+
+$layoutWidth: calc(100vw - 10px);
+$layoutWidthOnePanel:calc(100vw - 440px);
+
+$layout-breakpoint-xs: 414px;
+$layout-breakpoint-sm: 667px;
+$layout-breakpoint-md: 768px;
+$layout-breakpoint-lg: 1079px;
+$layout-breakpoint-xl: 1560px;
+
+$opacity-high: 0.87 !important;
+$opacity-mid: 0.60 !important;
+$opacity-low: 0.38 !important;

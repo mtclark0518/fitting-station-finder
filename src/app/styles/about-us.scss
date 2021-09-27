@@ -1,0 +1,16 @@
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    z-index: 100;
+    .about-us-modal {
+        padding: 1em 2em;
+        background: $light;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow-raised;
+        width: 50vw;
+        a {
+            text-decoration: none;
+        }
+    }
+}

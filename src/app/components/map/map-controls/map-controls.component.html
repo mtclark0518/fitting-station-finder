@@ -1,0 +1,22 @@
+<div class="map-controls">
+    <div class="pos-rel w100">
+        <div class="pos-abs w100 margin-0-auto">
+            <esri-search #search></esri-search>
+        </div>
+    </div>
+    <div class="hw100 d-flex justify-content-end align-items-end">
+    <div class="d-flex flex-column ">
+        <s4-icon class="mb-3 box-shadow-flat" icon="map-marker-alt" cssClass="pointer-events-auto bg std search-bar-icon cursor-pointer"
+            (trigger)="onCurrent()" data-toggle="tooltip" title="Use current location">
+        </s4-icon>
+    
+        <div class="d-flex flex-column  box-shadow-flat mb-3">
+            <s4-icon icon="plus" [class.icon-disabled]="isAtMaxZoom" cssClass="pointer-events-auto bg std cursor-pointer"
+                (trigger)="onZoomIn()" title="Zoom In"></s4-icon>
+            <s4-icon icon="minus" [class.icon-disabled]="isAtMinZoom" cssClass="pointer-events-auto bg std cursor-pointer"
+                (trigger)="onZoomOut()" title="Zoom Out">
+            </s4-icon>
+        </div>
+    </div>
+</div>
+</div>

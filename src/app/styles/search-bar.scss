@@ -1,0 +1,214 @@
+.esri-search-wrapper {
+    width: auto;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 6px;
+    pointer-events:auto;
+    .esri-input-container-wrapper {
+        background: $bg;
+        display: flex;
+        box-shadow: none;
+        z-index: 3;
+        height: 40px;
+        margin: 0 auto;
+
+        .esri-input-container {
+            flex: 1;
+            display: flex;
+            padding: 5px 8px 0 14px;
+
+            .icon-container-wrapper {
+                display: flex;
+                align-items: center;
+                margin-top: -5px;
+
+                .icon-container {
+                    margin: auto;
+                    display: inline-block;
+                    line-height: 20px;
+                    position: relative;
+                    width: 34px;
+                }
+
+                &.icon-right {
+                    padding-right: 10px;
+                    margin-right: -10px;
+                    button{
+                        cursor: pointer;
+                        pointer-events: auto;
+                    }
+                    svg:hover, i:hover {
+                        fill: $secondary;
+                        color: $secondary;
+                    }
+                }
+
+                &.icon-left {
+                    cursor: default !important;
+                    padding-right: 10px;
+                    margin-left: -10px;
+                }
+            }
+
+            .esri-input-wrapper {
+                display: flex;
+                flex: 1;
+                flex-wrap: wrap;
+
+                .esri-input-overlay {
+                    color: transparent;
+                    flex: 100%;
+                    white-space: pre;
+                    height: 30px;
+                }
+
+                .esri-input {
+                    background-color: transparent;
+                    border: none;
+                    margin: 0;
+                    padding: 0;
+                    color: rgba(0, 0, 0, .87);
+                    word-wrap: break-word;
+                    outline: none;
+                    display: flex;
+                    flex: 100%;
+                    margin-top: -33px;
+                    height: 30px;
+                    font-size: 12px;
+                }
+            }
+
+            .icon-group-container {
+              display: flex;
+              flex: 0 0 auto;
+              margin-top: -5px;
+              align-items: stretch;
+              flex-direction: row;
+              .icon-and-border-container{
+                  flex: 1 0 auto;
+                  display: none;
+                  cursor: pointer;
+                  align-items: center;
+                  border: 0;
+                  background: transparent;
+                  outline: none;
+                  padding: 0 8px;
+                  padding-right: 4px;
+                  line-height: 44px;
+                  .icon-decorator {
+                      display: inline-block;
+                      fill: currentColor;
+                      line-height: 24px;
+                      position: relative;
+                      width: 24px;
+
+                  }
+                  .icon-group-item {
+                      height: 100%;
+                      color: #70757a;
+                      vertical-align: middle;
+                      outline: none;
+                      margin-right: 12px;
+                  }
+                  .icon-border {
+                      border-left: 1px solid #dfe1e5;
+                      height: 65%;
+                  }
+                  &.d-flex {
+                      display: flex;
+                  }
+              }
+            }
+        }
+    }
+
+    .esri-dropdown-list-wrapper {
+        display: none;
+        position: absolute;
+        width: 100%;
+        text-align: left;
+        margin-top: -1px;
+        z-index: 3;
+        cursor: default;
+
+        .esri-dropdown-list-spacer {
+            display: none;
+            width: 0px;
+            height: 1px;
+            margin: 0 22px 0 0;
+        }
+
+        .esri-dropdown-list-container {
+            background: $bg;
+            box-shadow: 0 4px 6px rgb(32 33 36 / 28%);
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            border-radius: 0 0 24px 24px;
+            padding-bottom: 4px;
+            overflow: hidden;
+
+            .esri-dropdown-list {
+                flex: auto;
+                padding-left: 0;
+                padding-bottom: 8px;
+                // margin-block-start: 1em;
+                // margin-block-end: 1em;
+                // margin-inline-start: 0px;
+                // margin-inline-end: 0px;
+                // padding-inline-start: 40px;
+
+                .esri-dropdown-list-item {
+                    display: flex;
+                    align-items: center;
+                    min-width: 0;
+                    padding: 6px;
+                    margin: 0;
+                    opacity: $opacity-mid;
+                    cursor: pointer;
+                    font-size: calc(7px + 0.44vw);
+
+                    &:hover {
+                        opacity: $opacity-high;
+                    }
+                }
+            }
+        }
+    }
+
+    &.open {
+        .esri-input-container-wrapper {
+            border-color: rgba(223, 225, 229, 0);
+            box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+        }
+
+        .esri-dropdown-list-wrapper {
+            display: block;
+        }
+    }
+
+    &.square {
+        width: 100%;
+        display: inline-block;
+    }
+
+    &.round {
+        display: block;
+        width: 500px;
+
+        .esri-input-container-wrapper {
+            border: 1px solid $light-d;
+            border-radius: 24px;
+        }
+
+        &.open {
+            .esri-input-container-wrapper {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
+}

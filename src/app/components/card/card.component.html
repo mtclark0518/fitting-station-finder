@@ -1,0 +1,24 @@
+<div class="s4-card-container mx-1">
+  <div class="s4-card rounded-edges box-shadow-flat p-2 mt-1  cursor-pointer"
+  [class.hovered]="isHovered"
+  [class.selected]="isSelected"  
+  (click)="onSelect()">
+    <div class="font-headng fw700 txt6 w100 text-center mb-1">{{ card.site }}</div>
+    <div class="font-mail txt7 w100 text-center mb-1">{{ card.phone1 }}</div>
+    <div class="d-flex flex-row w100">
+      <div class="w60 flex-column align-items-center">
+        <div class="header font-heading txt7 mb-1">Address</div>
+        <div class="txt8 align-self-start">{{ card.street }}</div>
+        <div class="txt8 align-self-start">{{ card.city }}, FL, {{ card.zipcode }}</div>
+      </div>
+      <div class="w40 flex-column align-items-center">
+        <div class="text-center header font-heading txt7 mb-1">Hour of Operation</div>
+        <div class="text-center txt8">{{ operatingDays }}</div>
+        <div class="text-center txt8">{{ operatingHours}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="pb-2 pt-1 centered">
+    <div *ngIf="hasDistance" class="font-main txt7">{{ card.distance }} Miles Away</div>
+  </div>
+</div>

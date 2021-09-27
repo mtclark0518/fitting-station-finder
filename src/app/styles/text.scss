@@ -1,0 +1,167 @@
+.font-main,
+.main-font {
+    font-family: $font-main;
+}
+
+.font-heading,
+.heading-font {
+    font-family: $font-heading !important;
+}
+
+.font-serif,
+.serif {
+    font-family: $font-serif !important;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.text-strikethrough {
+    text-decoration: line-through;
+}
+.lh16 {
+    line-height: 16px;
+}
+
+.lh24 {
+    line-height: 24px;
+}
+
+.ft11 {
+    font-size: 11px;
+}
+
+.ft14 {
+    font-size: 14px;
+}
+
+.ft16 {
+    font-size: 16px;
+}
+
+.ft18 {
+    font-size: 18px;
+}
+
+.font1em {
+    font-size: 1em;
+}
+
+.font125em {
+    font-size: 1.25em;
+}
+
+
+.font15em {
+    font-size: 1.5em;
+}
+
+
+.font175em {
+    font-size: 1.75em;
+}
+
+.font2em {
+    font-size: 2em;
+}
+
+.txt1 {
+    line-height: 52px !important;
+    font-size: 36px !important;
+}
+
+.txt2 {
+    line-height: 36px !important;
+    font-size: 28px !important;
+}
+
+.txt3 {
+    line-height: 30px !important;
+    font-size: 24px !important;
+}
+
+.txt4 {
+    line-height: 22px !important;
+    font-size: 18px !important;
+}
+
+.txt5 {
+    line-height: 20px !important;
+    font-size: 16px !important;
+}
+
+.txt6 {
+    line-height: 18px !important;
+    font-size: 14px !important;
+}
+
+.txt7 {
+    line-height: 16px !important;
+    font-size: 13px !important;
+}
+
+.txt8 {
+    line-height: 15px !important;
+    font-size: 12px !important;
+}
+
+.txt9 {
+    line-height: 12px !important;
+    font-size: 10px !important;
+}
+
+.fw400 {
+    font-weight: 400;
+}
+
+.fw500,
+.font-medium {
+    font-weight: 500;
+}
+
+.fw600 {
+    font-weight: 600;
+}
+
+.fw700 {
+    font-weight: 700;
+}
+
+.fw800 {
+    font-weight: 800;
+}
+
+.font-bold,
+.bold,
+.fw800 {
+    font-weight: 800;
+}
+
+.font-italic {
+    font-style: italic !important;
+}
+
+.no-txt-decoration {
+    text-decoration: none;
+}
+
+.indent-1 {
+    text-indent: 1em;
+}
+
+.indent-2 {
+    text-indent: 2em;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}

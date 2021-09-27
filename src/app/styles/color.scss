@@ -1,0 +1,487 @@
+@use "sass:color";
+
+.bg {
+    background: var(--bg);
+    background-color: var(--bg);
+    fill: var(--bg);
+}
+
+.bg-light {
+    background: $light;
+    background-color: $light;
+}
+
+.surface {
+    background: $surface;
+    background-color: $surface;
+    fill: $surface;
+}
+
+.primary {
+    background: $primary;
+    background-color: $primary;
+    fill: $primary;
+}
+
+.primary-d {
+    background: $primary-d;
+    background-color: $primary-d;
+    fill: $primary-d;
+}
+
+.primary-l {
+    background: $primary-l;
+    background-color: $primary-l;
+    fill: $primary-l;
+}
+
+.secondary {
+    background: $secondary;
+    background-color: $secondary;
+    fill: $secondary;
+}
+
+.secondary-d {
+    background: $secondary-d;
+    background-color: $secondary-d;
+    fill: $secondary-d;
+}
+
+.secondary-l {
+    background: $secondary-l;
+    background-color: $secondary-l;
+    fill: $secondary-l;
+}
+
+.error {
+    background: $error;
+    background-color: $error;
+    fill: $error;
+}
+
+.warning {
+    background: $indigo;
+    background: linear-gradient(125deg, $indigo 1%, $blue 10%, $blue, $indigo);
+    background-size: 400% 300%;
+    background-position: top right;
+    animation: movement 120s $easing-in-out-quart 15s infinite alternate;
+}
+
+.indigo {
+    background: $indigo;
+    background-color: $indigo;
+    fill: $indigo;
+}
+
+.salmon {
+    background: $salmon;
+    background-color: $salmon;
+    fill: $salmon;
+}
+
+.teal-d {
+    background: $teal-dark;
+    background-color: $teal-dark;
+    fill: $teal-dark;
+}
+
+.red-l {
+    background: $red-light;
+    background-color: $red-light;
+    fill: $red-light;
+}
+
+.yellow {
+    background: $yellow;
+    background-color: $yellow;
+    fill: $yellow;
+}
+
+.orange {
+    background: $orange !important;
+    background-color: $orange !important;
+    fill: $orange !important;
+}
+
+.orange-d {
+    background: $orange-dark !important;
+    background-color: $orange-dark !important;
+    fill: $orange-dark !important;
+}
+
+.green {
+    background: $green;
+    background-color: $green;
+    fill: $green;
+}
+
+.green-d {
+    background: $green-dark;
+    background-color: $green-dark;
+    fill: $green-dark;
+}
+
+.red {
+    background: $red;
+    background-color: $red;
+    fill: $red;
+}
+
+.red-d {
+    background: $red-dark;
+    background-color: $red-dark;
+    fill: $red-dark;
+}
+
+
+.clr-green {
+    color: $green;
+    stroke: $green;
+}
+
+.clr-green-d {
+    color: $green-dark;
+    stroke: $green-dark;
+}
+
+
+.clr-orange {
+    color: $orange;
+    stroke: $orange;
+}
+
+.clr-orange-d {
+    color: $orange-dark;
+    stroke: $orange-dark;
+}
+
+.clr-red {
+    color: $red;
+    stroke: $red;
+}
+
+.clr-red-d {
+    color: $red-dark;
+    stroke: $red-dark;
+}
+
+.clr-yellow {
+    color: $yellow;
+    stroke: $yellow;
+}
+.clr-light{
+    color: $light;
+    stroke:$light;
+}
+
+@keyframes movement {
+    0% {
+        background-position: top right;
+    }
+
+    50% {
+        background-position: top center;
+
+    }
+
+    100% {
+        background-position: bottom left;
+    }
+}
+
+.letter-wrap-mid {
+    color: $on-secondary;
+    text-shadow: 0 -2px 2px $txt-disabled;
+
+}
+
+.success {
+    background: $green;
+    background-color: $green;
+    fill: $green;
+}
+
+.clr-primary {
+    color: $primary;
+    stroke: $primary;
+}
+
+.clr-secondary {
+    color: $secondary;
+    stroke: $secondary;
+}
+.warning-message,
+.clr-error {
+    color: $error;
+    stroke: $error;
+}
+
+.clr-success {
+    color: $green;
+    stroke: $green;
+}
+
+.on-bg {
+    color: $on-bg;
+    stroke: $on-bg;
+}
+
+.on-surface {
+    color: $on-surface;
+    stroke: $on-surface
+}
+
+.on-secondary {
+    color: $on-secondary;
+    stroke: $on-secondary;
+}
+
+.on-primary {
+    color: $on-primary;
+    stroke: $on-primary;
+}
+
+.on-error {
+    color: $on-error;
+    stroke: $on-error;
+}
+
+.on-warning {
+    color: $light;
+    stroke: $light;
+}
+
+.txt-active {
+    color: $txt-active;
+    stroke: $txt-active;
+}
+
+.txt-helper {
+    color: $txt-helper;
+    stroke: $txt-helper;
+}
+
+.txt-disabled {
+    color: $txt-disabled;
+    stroke: $txt-disabled;
+}
+
+.teal {
+    background: $teal;
+}
+
+.violet {
+    background: $violet;
+}
+.yellow{
+    background: $yellow;
+}
+
+.light {
+    fill: $light;
+    background: $light;
+    background-color: $light;
+}
+.light-l {
+    fill: $light-l;
+    background: $light-l;
+    background-color: $light-l;
+}
+
+.hover-clr-primary,
+.highlight-clr-primary,
+.hover-clr-secondary,
+.highlight-clr-secondary,
+.hover-bg-primary,
+.highlight-bg-primary,
+.highlight-bg-light,
+.hover-bg-secondary,
+.hover-clr-light-d,
+.hover-clr-red,
+.highlight-bg-secondary {
+    transition: all $dur100 $easing-accel;
+    cursor: pointer;
+}
+
+.hover-clr-primary,
+.highlight-clr-primary {
+    &:hover {
+        color: $primary;
+
+        &.light {
+            color: $primary-l
+        }
+
+        &.dark {
+            color: $primary-d
+        }
+    }
+}
+
+.hover-bg-primary,
+.highlight-bg-primary {
+    &:hover {
+        background: $primary;
+
+        &.light {
+            background: $primary-l
+        }
+
+        &.dark {
+            background: $primary-d
+        }
+    }
+}
+
+.hover-bg-secondary,
+.highlight-bg-secondary {
+    &:hover {
+        background: $secondary;
+    }
+}
+
+.hover-bg-light-d,
+.highlight-bg-light-d {
+    &:hover {
+        background: $light-d;
+    }
+}
+.hover-bg-light,
+.highlight-bg-light {
+    &:hover {
+        background: $light;
+    }
+}
+
+.hover-clr-secondary,
+.highlight-clr-secondary {
+    &:hover {
+        color: $secondary;
+    }
+}
+
+.hover-clr-light,
+.highlight-clr-light {
+    &:hover {
+        color: $light;
+    }
+}
+
+.hover-clr-red,
+.highlight-clr-red {
+    &:hover {
+        color: $red;
+    }
+}
+
+
+
+.hover-fill {
+    transition: opacity $dur150 $easing-accel;
+
+    &:hover {
+        opacity: 1 !important;
+    }
+}
+
+.bg-light-hover-darken {
+    @include lightenBgOnHover($light, -10%);
+
+}
+
+.bg-primary-hover-lighten {
+    @include lightenBgOnHover($primary, 10%);
+}
+
+.bg-secondary-hover-lighten {
+    @include lightenBgOnHover($secondary, 10%);
+}
+
+.bg-error-hover-lighten {
+    @include lightenBgOnHover($error, 10%);
+}
+.clr-primary-hover-lighten{
+    @include lightenColorOnHover($primary, 10%);
+}
+
+.fading-gradient {
+    position: relative;
+    height: 100%;
+    overflow: visible;
+
+    .inner {
+        position: absolute;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    &.rtl {
+        .inner {
+            width: 35px;
+            right: 0;
+
+            &.bg {
+                @include fadeTo(right, $bg)
+            }
+
+            &.primary {
+                @include fadeTo(right, $primary)
+            }
+
+            &.primary-d {
+                @include fadeTo(right, $primary-d)
+            }
+
+            &.primary-l {
+                @include fadeTo(right, $primary-l)
+            }
+
+            &.secondary {
+                @include fadeTo(right, $secondary)
+            }
+        }
+    }
+
+    &.ltr {
+        .inner {
+            width: 15px;
+            left: 0;
+
+            &.bg {
+                @include fadeTo(left, $bg)
+            }
+
+            &.primary {
+                @include fadeTo(left, $primary)
+            }
+
+            &.primary-d {
+                @include fadeTo(left, $primary-d)
+            }
+
+            &.primary-l {
+                @include fadeTo(left, $primary-l)
+            }
+
+            &.secondary {
+                @include fadeTo(left, $secondary)
+            }
+        }
+    }
+}
+
+// $offwhite: #f1f3f5;
+// $theme-light: #eaf1fa;
+// $theme-mid-light: #cfd6de;
+// $theme-mid: #8b9199;
+// $theme-mid-dark: #50565d;
+// $theme-dark: #13181e;
+
+// $theme-accent-primary: $indigo;
+// $theme-accent-secondary: $lime;
+
+// $main-bg: $white;
+// $main-clr: $theme-dark;
+
+// $contrast-bg:$main-clr;
+// $contrast-clr:$main-bg;

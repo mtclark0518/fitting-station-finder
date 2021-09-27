@@ -1,0 +1,362 @@
+button:focus {
+    outline: none
+}
+
+// *Used by Icon Button* // *
+// ************ // **
+@mixin baseBtn() {
+    text-decoration: none;
+    outline: none;
+    border: none;
+    background: transparent;
+    transition: all $dur100 $easing-std;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.s4-btn {
+    @include baseBtn();
+    cursor: pointer;
+
+    &.std {
+        width: 30px;
+        height: 30px;
+        background: $surface;
+        @include lightenColorOnHover($secondary-d, 20%);
+        color: $primary-d !important;
+        stroke: $primary-d !important;
+        // fill: $on-surface;
+        @include centered();
+
+        i,
+        svg,
+        span {
+            width: 20px;
+            height: 20px;
+            opacity: $opacity-high;
+        }
+    }
+
+    &.secondary-toggle {
+        color: $txt-helper;
+
+        &:hover {
+            color: $txt-active;
+        }
+
+        &.active {
+            background: $secondary;
+            color: $on-secondary !important;
+
+            &:hover {
+                color: $on-secondary;
+            }
+
+            @include lightenBgOnHover($secondary, 20%);
+        }
+    }
+
+    &.primary {
+        background: $primary !important;
+        color: $on-primary !important;
+        stroke: $on-primary !important;
+    }
+
+    &.secondary {
+        background: $secondary;
+        color: $on-secondary;
+    }
+
+    &.disabled,
+    &.disabled:hover {
+        color: $txt-disabled;
+        stroke: $txt-disabled;
+        opacity: $opacity-mid;
+        cursor: auto;
+    }
+
+    &.search-bar-icon{
+        cursor: default !important;
+        width: 34px;
+        height: 34px;
+        &.points {
+            cursor: pointer !important;
+        }
+    }
+}
+
+.icon-disabled .s4-btn {
+    pointer-events: none;
+
+    i,
+    svg,
+    span,
+    svg * {
+        color: $txt-disabled !important;
+        fill-opacity: $opacity-mid;
+        stroke-opacity: $opacity-mid;
+    }
+}
+
+.cancel-btn {
+    background-color: $light;
+    color: $txt-helper;
+
+    &:hover {
+        background-color: $red-dark;
+        border-color: $dark;
+        color: $on-primary
+    }
+}
+
+.success-btn {
+    background-color: $light;
+    color: $txt-helper;
+
+    &.active {
+        background: $success;
+        color: $light-d;
+        border: 1px solid $light-d;
+
+        &:hover {
+            color: $light-l;
+            border-color: $bg;
+        }
+    }
+}
+
+.btn-group {
+    box-shadow: $box-shadow-flat;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: $border-radius;
+    border: 1px solid $txt-disabled;
+
+    .member {
+        @include centered();
+        flex: 1;
+        background: $primary;
+
+        .text {
+            color: $on-primary;
+            opacity: $opacity-mid;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .text {
+                opacity: $opacity-high;
+            }
+        }
+
+        &.active {
+            background: $secondary;
+
+            .text {
+                color: $on-secondary;
+                opacity: $opacity-high;
+            }
+        }
+    }
+}
+
+.pill {
+    @include baseBtn();
+    border-radius: 500px !important; // more effective than trying to round each corner
+    opacity: $opacity-high;
+    box-shadow: $box-shadow-flat;
+    border: 1px solid;
+    padding: 0.25rem !important;
+
+    &.pill-dark {
+        color: $on-primary;
+        @include lightenBgOnHover($primary, 20%);
+
+        border-color: $primary-l;
+
+        &:hover {
+
+            border-color: scale-color($bg, $lightness: -20%);
+        }
+    }
+
+    &.pill-light {
+        background: $surface;
+        color: $on-surface;
+        border-color: $primary;
+
+        &:hover {
+            color: $secondary;
+            border-color: $secondary;
+        }
+    }
+
+    &.pill-secondary {
+        background: $secondary;
+        color: $on-secondary;
+        border-color: $on-secondary;
+    }
+}
+
+//*** panel-action-button ***//
+.pab {
+    @include baseBtn();
+    @include centered();
+    height: 48px;
+    min-height: 48px !important;
+    width: 100%;
+    display: block;
+    background: $primary;
+
+    .on-primary {
+        opacity: $opacity-mid;
+    }
+
+    &.enabled {
+
+        .on-primary {
+            opacity: $opacity-high;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @include lightenBgOnHover($primary, 10%);
+    }
+}
+
+.hsmv-rpt-link {
+    color: $secondary !important;
+
+    &:hover {
+        text-decoration: underline !important;
+        cursor: pointer;
+    }
+}
+.nav-btn {
+    width: 45px !important;
+    height: 45px;
+}
+// ** state of florida svg **//
+.florida {
+    stroke: $primary !important;
+    fill: none!important;
+    stroke-width: 4px;
+
+}
+
+
+.sideMenuButton {
+    width: 46px;
+    height: 46px;
+    text-decoration: none;
+    transition: all $dur200 $easing-std;
+
+}
+
+.custom-area-buttons {
+    .s4-btn {
+        transition: all 150ms $easing-std;
+        background: $light;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow-flat;
+        padding: 0.5em;
+
+        i,
+        span,
+        svg {
+            transition: all 150ms $easing-std;
+            color: $primary;
+            width: 32px !important;
+            height: 32px;
+            vertical-align: middle !important;
+
+            &.svg-draw-circle {
+                transition: all 150ms $easing-std;
+                fill: $primary;
+            }
+        }
+
+        &.active {
+            transition: all 150ms $easing-std;
+            background: $blue;
+
+            i,
+            span,
+            svg {
+                transition: all 150ms $easing-std;
+                color: $light;
+
+                &.svg-draw-circle {
+                    transition: all 150ms $easing-std;
+                    fill: $light;
+                }
+            }
+        }
+    }
+}
+
+.user-custom {
+    height: 50px;
+    width: 50px;
+
+    #backdrop {
+        opacity: 0;
+        fill: $secondary;
+        transition: all 500ms;
+
+    }
+
+    #user {
+        opacity: $opacity-mid;
+
+        fill: $on-bg;
+        transition: all 300ms;
+
+    }
+
+    &:hover {
+        #user {
+            opacity: $opacity-high;
+
+            fill: $secondary;
+        }
+    }
+
+    &.active {
+        #backdrop {
+            opacity: 1
+        }
+
+        &:hover {
+            #backdrop {
+                opacity: 0
+            }
+        }
+    }
+
+}
+.directions-link {
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+    height: 30px;
+    max-height: 30px;
+    min-height: 30px;
+    border-radius: $border-radius;
+    border: 1px solid $primary;
+    background-color: $light;
+    box-shadow: $box-shadow-flat;
+    .dl-icon{
+        padding-top: 2.5px;
+        height: 25px;
+        min-height: 25px;
+        max-height: 25px;
+        display: inline-block;
+        margin-right: 5px;
+    }
+}

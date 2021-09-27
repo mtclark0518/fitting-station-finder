@@ -1,0 +1,518 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    @include noScrollbar();
+}
+
+textarea,
+textarea:focus,
+canvas,
+canvas:focus {
+    outline: none;
+}
+
+
+
+// p,
+// div,
+// span,
+// input,
+// textarea,
+// button {
+//   font-family: $font-main;
+// }
+
+// input,
+textarea,
+button,
+a {
+    text-decoration: none;
+}
+
+// *****************
+// * Extend variable definitions as classes
+// * Classes controlling a single property or mixin
+// *****************
+.seperator {
+    height: 5px;
+    width: 100%;
+    border-bottom: 3px solid $primary;
+}
+.opacity-low {
+    opacity: $opacity-low;
+}
+
+.opacity-mid {
+    opacity: $opacity-mid
+}
+
+.opacity-high {
+    opacity: $opacity-high;
+}
+
+.transition-std {
+    transition: all 200ms $easing-std;
+}
+
+.box-shadow-flat {
+    box-shadow: $box-shadow-flat;
+}
+
+.box-shadow-right-flat {
+    box-shadow: $box-shadow-right-flat;
+}
+
+.box-shadow-raised {
+    box-shadow: $box-shadow-raised;
+}
+
+.box-shadow-std {
+    box-shadow: $box-shadow-std;
+}
+
+.box-shadow-main {
+    box-shadow: $box-shadow-main;
+}
+
+.hover-lift {
+    transition: all $dur300 $easing-accel;
+    box-shadow: $box-shadow-flat;
+
+    &:hover {
+        box-shadow: $box-shadow-main;
+    }
+}
+
+
+// may be able to remove in favor of bootstrap justify-content-even
+// for a time this particular property wasn't included in bootstrap
+.justify-even {
+    justify-content: space-evenly !important;
+}
+
+// display flex - justify-content-center - align-items-center
+.centered {
+    @include centered();
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.shrink {
+    flex-shrink: 1;
+}
+
+.flex-auto {
+    flex: 1;
+    display: flex;
+    overflow: auto;
+}
+
+
+.no-padding {
+    padding: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-box-shadow {
+    box-shadow: none;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}
+
+.overflow-scroll-y,
+.overflow-y-scroll {
+    overflow-y: scroll;
+}
+.overflow-hidden-y,
+.overflow-y-hidden {
+    overflow-y: hidden;
+}
+
+.overflow-scroll-x,
+.overfow-x-scroll {
+    overflow-x: scroll;
+}
+
+.overflow-auto-y,
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+.overflow-auto-x,
+.overflow-x-auto {
+    overflow-x: auto;
+}
+
+.overflow-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+.overflow-visible {
+    overflow: visible;
+}
+
+.no-scrollbar {
+    @include noScrollbar();
+}
+
+
+// * Border radius
+.circle,
+.oval {
+    border-radius: 50% !important;
+}
+
+
+.rounded {
+    border-radius: 30%;
+}
+
+.rounded-edges {
+    border-radius: $border-radius !important;
+}
+
+.rounded-bottom-edges {
+    border-radius: 0 0 $border-radius $border-radius;
+}
+
+.rounded-top-edges {
+    border-radius: $border-radius $border-radius 0 0;
+}
+
+.rounded-right-edges {
+    border-radius: 0 $border-radius $border-radius 0;
+}
+
+.rounded-left-edges {
+    border-radius: $border-radius 0 0 $border-radius;
+}
+
+// * Height / Width
+.h5 {
+    height: 5%;
+}
+
+.vh5 {
+    height: 5vh;
+}
+
+.h10 {
+    height: 10%;
+}
+
+.vh10 {
+    height: 10vh;
+}
+
+.h15 {
+    height: 15%;
+}
+
+.vh15 {
+    height: 15vh;
+}
+
+.h20 {
+    height: 20%;
+}
+
+.vh20 {
+    height: 20vh;
+}
+
+.h25 {
+    height: 25%;
+}
+
+.vh25 {
+    height: 25vh;
+}
+
+.h30 {
+    height: 30%;
+}
+
+.vh30 {
+    height: 30vh;
+}
+
+.h33 {
+    height: 33%;
+}
+
+.vh33 {
+    height: 33vh;
+}
+
+.h40 {
+    height: 40%;
+}
+
+.vh40 {
+    height: 40vh;
+}
+
+.vh45 {
+    height: 45vh;
+}
+
+.h50 {
+    height: 50%;
+}
+
+.vh50 {
+    height: 50vh;
+}
+
+.h60 {
+    height: 60%;
+}
+
+.vh60 {
+    height: 60vh;
+}
+
+.vh66 {
+    height: 66vh;
+}
+
+
+.h66 {
+    height: 66%;
+}
+
+.h75 {
+    height: 75%;
+}
+
+.vh75 {
+    height: 75vh;
+}
+
+.h70 {
+    height: 70%
+}
+
+.vh70 {
+    height: 70vh;
+}
+
+.h80 {
+    height: 80%
+}
+
+.vh80 {
+    height: 80vh;
+}
+
+.h85 {
+    height: 85%;
+}
+
+.vh85 {
+    height: 85vh;
+}
+
+.h90 {
+    height: 90%;
+}
+
+.vh90 {
+    height: 90vh;
+}
+
+.h95 {
+    height: 95%;
+}
+
+.vh95 {
+    height: 95vh;
+}
+
+.h99 {
+    height: 99%;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.vh100 {
+    height: 100vh;
+}
+
+.w5 {
+    width: 5%;
+}
+
+.vw5 {
+    width: 5vh;
+}
+
+.w10 {
+    width: 10%;
+}
+
+.w15 {
+    width: 15%;
+}
+
+.w20 {
+    width: 20%;
+}
+
+.w25 {
+    width: 25%;
+}
+
+.w30 {
+    width: 30%;
+}
+
+.w33 {
+    width: 33%;
+}
+
+.w35 {
+    width: 35%;
+}
+
+.w40 {
+    width: 40%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w60 {
+    width: 60%;
+}
+
+.w66 {
+    width: 66%
+}
+
+.w70 {
+    width: 70%;
+}
+
+.w75 {
+    width: 75%
+}
+
+.w85 {
+    width: 85%;
+}
+
+.w90 {
+    width: 90%;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.hw100 {
+    width: 100%;
+    height: 100%;
+}
+
+.pos-abs {
+    position: absolute;
+}
+
+.pos-rel {
+    position: relative;
+}
+
+.hidden,.display-none {
+    display: none !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.pointer-events-none {
+    pointer-events: none;
+}
+
+.pointer-events-auto {
+    pointer-events: auto;
+}
+
+.white-space-no-wrap,
+.whitespace-no-wrap,
+.white-space-nowrap,
+.whitespace-nowrap {
+    white-space: nowrap !important;
+}
+
+.pull-top-1 {
+    margin-top: -0.15rem !important;
+}
+
+.pull-top-2 {
+    margin-top: -.25rem !important;
+}
+
+.pull-top-3 {
+    margin-top: -0.5rem !important;
+}
+
+.m-0-auto {
+    margin: 0 auto;
+}
+
+.all-transitions-300 {
+    transition: all 300ms ease-in-out;
+}
+
+.invalid {
+    border: 1px solid $red;
+}
+
+.dashed-line {
+    margin: 5px 0;
+    height: 1px;
+
+    &.primary {
+        background:
+            repeating-linear-gradient(to right, $primary 0, $primary 10px, transparent 10px, transparent 12px)
+    }
+}
+
+.tooltip-content {
+    box-shadow: $box-shadow-main;
+    padding: 0.5em 1em;
+    border-radius: $border-radius;
+    border: 1px solid $bg;
+    background: $light;
+    color: $txt-active;
+    font-size: 12px;
+    max-width: 35%;
+    position: absolute;
+}

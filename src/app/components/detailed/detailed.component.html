@@ -1,0 +1,37 @@
+<div class="hw100 d-flex flex-column px-1">
+    <div class="d-flex flex-row align-items-center justify-content-between p-1">
+        <div *ngIf="site" class="font-heading fw700 txt4 my-2">{{site.site}}</div>
+        <s4-icon icon="times-circle" cssClass="pointer-events-auto cursor-pointer hover-clr-secondary" (trigger)="onClose()"></s4-icon>
+    </div>
+    <div>
+        <div class="mb-1"><span class="font-headng txt7 mx-1">Address:</span><span class="font-main txt7">{{address}}</span></div>
+        <div class="d-flex flex-row mb-1">
+            <div class="flex-column w70">
+                <div class="mb-1"><span class="font-headng txt7 mx-1">Website:</span><span *ngIf="site" class="font-main txt7">{{site.link}}</span></div>
+                <div class="mb-1"><span class="font-headng txt7 mx-1">Phone:</span><span *ngIf="site" class="font-main txt7">{{site.phone1}} <span *ngIf="site.ext1 !== ' '" class="mx-1 txt7">ext {{site.ext1}}</span></span></div>
+                <div class="mb-1"><span class="font-headng txt7 mx-1">Email:</span><span *ngIf="site" class="font-main txt7">{{site.email}}</span></div>
+                <div class="mb-1"><span class="font-headng txt7 mx-1">Hours:</span><span *ngIf="site" class="font-main txt7">{{hoursOfOperation}}</span></div>
+
+            </div>
+            <div class="pointer-events-auto w25">
+                <div *ngIf="canGiveDirections" class="d-flex flex-column align-items-center">
+                    <div class="font-heading txt6 fw700 mb-1">Get Directions</div>
+                    <directions-link service="google" [site]="site"></directions-link>
+                    <directions-link service="mapquest" [site]="site"></directions-link>
+                    <directions-link service="bing" [site]="site"></directions-link>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    <div class="seperator my-1"></div>
+    <div class="mb-1"><span class="font-headng txt7 mx-1">Contact:</span><span *ngIf="site" class="font-main txt7 mx-1">{{site.contact}}</span></div>
+    <div class="mb-1"><span class="font-headng txt7 mx-1">County:</span><span *ngIf="site" class="font-main txt7 mx-1">{{site.county}}</span></div>
+    <div class="mb-1"><span class="font-headng txt7 mx-1">Appointment Required?</span><span *ngIf="site" class="font-main txt7 mx-1">{{site.appoint}}</span></div>
+    <div class="mb-1"><span class="font-headng txt7 mx-1">Service Fee:</span><span *ngIf="site" class="font-main txt7">${{site.amount}}</span></div>
+    <div class="mb-1"><span class="font-headng txt7 mx-1">Hearing Impaired Assist:</span><span *ngIf="site" class="font-main txt7 mx-1">{{site.hearing}}</span></div>
+    <div class="mb-1"><span class="font-headng txt7 mx-1">Special Needs Services:</span><span *ngIf="site" class="font-main txt7 mx-1">{{site.snservice}}</span></div>
+    <div class="mb-1"><span class="font-headng txt7 mx-1">Donation Requested:</span><span *ngIf="site" class="font-main txt7 mx-1">{{site.donation}}</span></div>
+    <div class="mb-1"><span class="font-headng txt7 mx-1">Language Assist:</span><span *ngIf="site" class="font-main txt7 mx-1">{{site.language}}</span></div>
+    <div class="mb-1"><span class="font-headng txt7 mx-1">Additional Notes:</span><span *ngIf="site" class="font-main txt7 mx-1">{{site.notes}}</span></div>
+</div>

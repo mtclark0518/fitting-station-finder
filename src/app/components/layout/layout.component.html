@@ -1,0 +1,17 @@
+<map (loaded)="onMapLoad($event)"></map>
+<div class="layout-container">
+    <div *ngIf="isMapLoaded" class="pointer-events-none h100" 
+    [ngClass]="{
+      'active-left' : activePanels === 'left',
+      'active-bottom' : activePanels === 'bottom',
+      'active-both' : activePanels === 'both',
+      'active-none' : activePanels === 'none'
+    }">
+      <div class="center-panel">
+        <map-controls></map-controls>
+        <card-list></card-list>
+      </div>
+      <detailed class="panel left-panel"></detailed>
+
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<div [class]="classList" [awaitsClickOutside]="['esri-search-container']" (clickOutside)="onBlur()">
+    <div class="esri-input-container-wrapper">
+        <div class="esri-input-container">
+            <div *ngIf="inputStyle === 'round'" class="icon-container-wrapper icon-left">
+                <div class="icon-container">
+                    <s4-icon icon="search" cssClass="search-bar-icon"></s4-icon>
+                </div>
+            </div>
+            <div class="esri-input-wrapper">
+                <div class="esri-input-overlay"></div>
+                <input class="esri-input" type="text" maxlength="2048" autocapitalize="off" autocomplete="off" autofocus
+                    role="combobox" spellcheck="false" title="Search" [placeholder]="placeholder" [(ngModel)]="text"
+                    (input)="onFilter()" (focus)="onFocus()" />
+            </div>
+            <!-- <div class="icon-container-wrapper icon-right">
+                <div class="icon-container">
+                    <s4-icon [class.hidden]="text === undefined || text === ''" icon="times"
+                        (trigger)="onSelect(undefined)"></s4-icon>
+                </div>
+            </div> -->
+            <div class="icon-group-container">
+        <div class="icon-and-border-container d-flex" [class.hidden]="text === undefined || text === ''" >
+            <s4-icon icon="times" cssClass="icon-group-item icon-decorator" (trigger)="onSelect(undefined)" ></s4-icon>
+          <span class="icon-border"></span>
+        </div>
+        <div class="icon-container-wrapper icon-right">
+          <div class="icon-container">
+            <s4-icon icon="map-marker-alt" (trigger)="onCurrent()"></s4-icon>
+          </div>
+        </div>
+      </div>
+        </div>
+    </div>
+    <div class="esri-dropdown-list-wrapper">
+        <div class="esri-dropdown-list-spacer"></div>
+        <div class="esri-dropdown-list-container">
+            <ul class="esri-dropdown-list">
+                <li *ngIf="suggestions.length === 0" class="esri-dropdown-list-item">No results. Add more to your search</li>
+                <li *ngFor="let suggestion of suggestions" class="esri-dropdown-list-item"
+                    (click)="onSelect(suggestion)">
+                    {{ suggestion.text }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
