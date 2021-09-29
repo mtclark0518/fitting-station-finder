@@ -2,9 +2,9 @@
     height: 220px;
     min-height: 220px;
     max-height: 220px;
-    overflow: hidden;
+    overflow: visible;
     @include noScrollbar();
-    margin-top:5px;
+    padding-top: 5px;
 }
 .s4-card{
     width: 325px;
@@ -14,14 +14,21 @@
     pointer-events: auto;
     background-color: $bg;
     color: $on-bg;
-    border: 1px solid transparent;
+    border: 1px solid rgba(0,0,0,.15);
+    box-shadow: $box-shadow-std;
+    transition: box-shadow 250ms ease;
     &.hovered {
         border: 1px solid $primary;
+        box-shadow: $box-shadow-raised;
+        transition: box-shadow 250ms ease;
 
     }
     &.selected {
         border: 1px solid $primary;
         background-color: $secondary;
         color: $on-secondary;
+        box-shadow: $box-shadow-raised;
+        transition: box-shadow 250ms ease;
+
     }
 }

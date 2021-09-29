@@ -49,7 +49,7 @@
             pointer-events: none;
         }
         .bottom-panel {
-            background: $light-l;
+            background: $light;
             border-top-left-radius: $border-radius;
             border-top-right-radius: $border-radius;
             pointer-events: auto;
@@ -84,7 +84,7 @@
                 bottom: 0;
             }
             .bottom-panel{
-                bottom: -235px;
+                bottom: -240px;
             }
         }
 
@@ -101,10 +101,10 @@
             left: 430px;
             width: $layoutWidthOnePanel;
             .map-controls {
-                bottom: 231px;
+                bottom: 236px;
             }
             .bottom-panel{
-                height: 226px;
+                height: 230px;
                 bottom: -1px;
             }
         }
@@ -119,10 +119,10 @@
             left: 0;
             width: $layoutWidth;
             .map-controls {
-                bottom: 231px;
+                bottom: 236px;
             }
             .bottom-panel{
-                height: 226px;
+                height: 230px;
                 bottom: -1px;
             }
         }

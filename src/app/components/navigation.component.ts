@@ -13,7 +13,7 @@ import { StateService } from '../providers';
       </div>
     </div>
     <div class="grow centered">Search for child fitting stations in Florida</div>
-    <div class="w25 h100 d-flex justify-content-end align-items-center"><s4-icon icon="info-circle" cssClass="std bg-transparent search-bar-icon" (trigger)="showAboutUs()"></s4-icon></div>
+    <div class="w25 h100 d-flex justify-content-end align-items-center"><s4-icon icon="info-circle" cssClass="std bg-transparent search-bar-icon points" (trigger)="showAboutUs()"></s4-icon></div>
   </div>
   `,
 })
