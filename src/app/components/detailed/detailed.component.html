@@ -7,7 +7,7 @@
         <div class="mb-1"><span class="font-headng txt7 mx-1">Address:</span><span class="font-main txt7">{{address}}</span></div>
         <div class="d-flex flex-row mb-1">
             <div class="flex-column w70">
-                <div class="mb-1"><span class="font-headng txt7 mx-1">Website:</span><span *ngIf="site" class="font-main txt7">{{site.link}}</span></div>
+                <div class="mb-1 overflow-ellipsis"><span class="font-headng txt7 mx-1">Website:</span><a *ngIf="site && site.link !== '' && site.link !== ' '" href="{{site.link}}"class="pointer-events-auto cursor-pointer font-main txt7 ">{{site.link}}</a><span *ngIf="site && (site.link === '' || site.link === ' ')" class="font-main txt7">N/A</span></div>
                 <div class="mb-1"><span class="font-headng txt7 mx-1">Phone:</span><span *ngIf="site" class="font-main txt7">{{site.phone1}} <span *ngIf="site.ext1 !== ' '" class="mx-1 txt7">ext {{site.ext1}}</span></span></div>
                 <div class="mb-1"><span class="font-headng txt7 mx-1">Email:</span><span *ngIf="site" class="font-main txt7">{{site.email}}</span></div>
                 <div class="mb-1"><span class="font-headng txt7 mx-1">Hours:</span><span *ngIf="site" class="font-main txt7">{{hoursOfOperation}}</span></div>

@@ -128,7 +128,23 @@ export class MapComponent implements AfterViewInit {
   private updateCardList = (map: mapboxgl.Map) => {
     if (map.getZoom() >= 8) {
       setTimeout(() => {
-        let featureCollection = map.queryRenderedFeatures(undefined, {
+        let windowSize = {width: window.innerWidth, height: window.innerHeight};
+        let activePanels = this._state.activePanels;
+        let searchBoundary: any;
+        if (activePanels === 'bottom') {
+          searchBoundary = [[0,(windowSize.height - 230)],[(windowSize.width), 60]];
+        }
+        else if (activePanels === 'left') {
+          searchBoundary = [[420,(windowSize.height) ],[(windowSize.width), 60]]
+        }
+        else if (activePanels === 'both') {
+          searchBoundary = [[420,(windowSize.height - 230)],[(windowSize.width),60]];
+        }
+        else {
+          searchBoundary = [[0, (windowSize.height)],[(windowSize.width), 60]]
+        }
+        console.log(searchBoundary)
+        let featureCollection = map.queryRenderedFeatures(searchBoundary, {
           layers: [changingStations],
         });
         console.log(featureCollection);

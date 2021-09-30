@@ -125,6 +125,8 @@ export class SearchService {
         }));
     }
     async handleSearchedLocation(coordinates: number[]) {
+        this._state.removeSelectedFeature();
+        this._state.selected.next(undefined);
         this._state.zoomToPoint(coordinates);
         await this._state.removeMarker().then(() => {
             this._state.addMarker(coordinates);
